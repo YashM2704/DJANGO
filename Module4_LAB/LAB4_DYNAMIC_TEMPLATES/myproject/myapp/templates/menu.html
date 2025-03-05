@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+</head>
+<body>
+    <h1>Little Lemon Menu</h1>
+    {% if menu %}
+        <ul>
+            {% for item in menu %}
+                <li>{{ item.name }}: ${{ item.price }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No items to display</p>
+    {% endif %}
+</body>
+</html>
